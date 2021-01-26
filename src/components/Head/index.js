@@ -15,14 +15,14 @@ function IndexPage() {
         <meta property="og:url" content="https://tw3-quiz.lucas98fernando.vercel.app/"/>
         <meta property="og:title" content="The Witcher 3 - Quiz"/>
         <meta property="og:description" content="Imersão Alura React Next JS"/>
-        <meta property="og:image" content=""/>
+        <meta property="og:image" content="https://i.imgur.com/BnsIXUF.png"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://tw3-quiz.lucas98fernando.vercel.app/"/>
         <meta property="twitter:title" content="The Witcher 3 - Quiz"/>
         <meta property="twitter:description" content="Imersão Alura React Next JS"/>
-        <meta property="twitter:image" content=""/>
+        <meta property="twitter:image" content="https://i.imgur.com/BnsIXUF.png"/>
       </Head>
     </div>
   )
