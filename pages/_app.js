@@ -44,7 +44,8 @@ const GlobalStyle = createGlobalStyle`
     border-bottom-style: solid;
     border-bottom-width: 0.1rem; 
     height: 30px;
-    padding: 5px 10px;
+    margin: 10px 0 0;
+    padding: 10px 0;
     outline: none;
     transition: .5s ease-in-out;
     font-family: "Poppins", sans-serif;
@@ -72,6 +73,7 @@ const GlobalStyle = createGlobalStyle`
   .btn-quiz:disabled {
     background-color: ${({ theme }) => theme.colors.secondary};
     border: none;
+    cursor: default;
   }
 `;
 
