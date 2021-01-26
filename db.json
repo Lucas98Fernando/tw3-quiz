@@ -9,7 +9,8 @@
             "success": "#76FF03",
             "contrastText": "#FFFFFF",
             "black": "#222222",
-            "bgLight": "#F5F5F5"
+            "bgLight": "#F5F5F5",
+            "accent": "#03071E"
         },
         "border-radius": "10px"
     }

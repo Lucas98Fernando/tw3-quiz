@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 // Importando o arquivo de configuração
-import db from "../db.json";
+import db from '../db.json';
 import IndexPage from '../src/components/Head';
 
 const GlobalStyle = createGlobalStyle`
@@ -31,19 +34,57 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`
+
+  .formField {
+    width: 100%;
+    border: none;
+    border-bottom-color: ${({ theme }) => theme.colors.accent};
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem; 
+    height: 30px;
+    padding: 5px 10px;
+    outline: none;
+    transition: .5s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  .formField:focus {
+    transition: .5s ease-in-out;
+    border-bottom-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  .btn-quiz {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 15px;
+    background-color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.contrastText};
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .btn-quiz:disabled {
+    background-color: ${({ theme }) => theme.colors.secondary};
+    border: none;
+  }
+`;
 
 // Chamando as cores no arquivo de configuração json
+// eslint-disable-next-line prefer-destructuring
 const theme = db.theme;
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <IndexPage/>
+        <IndexPage />
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
