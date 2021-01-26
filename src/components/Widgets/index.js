@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 // Cards da página
 const WidgetsCards = styled.div `
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => {
       return theme.colors.bgLight;
@@ -30,7 +30,7 @@ WidgetsCards.Header = styled.header `
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 32px;
+  padding: 16px 30px;
   background: ${({ theme }) => theme.colors.primary};
 
   * {
@@ -40,7 +40,7 @@ WidgetsCards.Header = styled.header `
 
 // Estilos dos cards
 WidgetsCards.Content = styled.div `
-  padding: 22px 30px;
+  padding: 20px 25px;
   & > *:first-child {
     margin-top: 0;
   }

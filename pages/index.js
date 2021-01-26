@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 // Importando o arquivo de configuração
 import db from "../db.json";
+// Importando o arquivo de head HTML
 import Head from "../src/components/Head";
-// Importando o componente de Widgets
-import WidgetsCards from "../src/components/Widgets";
-// Importando o componenete de rodapé
-import FooterWrapper from "../src/components/Footer";
-// Importando o componente GitHubCorner
-import GitHubCorner from "../src/components/GitHubCorner";
 // Importando o componente QuizBackground
 import QuizBackground from "../src/components/QuizBackground";
+// Importando o componente de Widgets
+import WidgetsCards from "../src/components/Widgets";
+// Importando o componente GitHubCorner
+import GitHubCorner from "../src/components/GitHubCorner";
+// Importando o componenete de rodapé
+import FooterWrapper from "../src/components/Footer";
+// Importando o logo
+import QuizLogo from "../src/components/QuizLogo";
 
 // // Componente do background
 // const BackgroundImage = styled.div`
@@ -38,6 +41,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         {/* ========== Card ========== */}
         <WidgetsCards>
             <WidgetsCards.Header>
