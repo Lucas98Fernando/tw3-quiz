@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 // Importando o arquivo de configuração
 import db from "../db.json";
+import Head from "../src/components/Head";
 // Importando o componente de Widgets
 import WidgetsCards from "../src/components/Widgets";
 // Importando o componenete de rodapé
