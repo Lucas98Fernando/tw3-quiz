@@ -14,6 +14,8 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 // Importando o componente de Widgets
 import WidgetsCards from '../src/components/Widgets';
+// Importando o componente input
+import Input from '../src/components/Input';
 // Importando o componente GitHubCorner
 import GitHubCorner from '../src/components/GitHubCorner';
 // Importando o componenete de rodapé
@@ -70,18 +72,18 @@ export default function Home() {
               // O router vai fazer o redirecionamento para a página de quiz
             }}
             >
-              <input
-                className="formField"
-                type="text"
+              <Input
+                name = "NomeUsuario"
                 maxLength="20"
                 // Pegando o valor do input durança a mudança de estado
-                onChange={function (infoEvent) {
+                onChange={(infoEvent) => {
                   // console.log(infoEvent.target.value);
                   // State 
                   // name = infoEvent.target.value;
                   setName(infoEvent.target.value);
                 }}
                 placeholder="Informe o seu nome para começar :)"
+                value = {name}
               />
               {/* Verificando se o input está vazio, se estiver, o botão fica desabilitado */}
               <button className="btn-quiz" type="submit" disabled={name.length === 0}>

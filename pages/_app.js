@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     margin-left: 10px;
   }
 
-  .formField {
+  /* .formField {
     width: 100%;
     border: none;
     background:  ${({ theme }) => theme.colors.bgLight}; 
@@ -81,7 +81,7 @@ const GlobalStyle = createGlobalStyle`
   .formField:focus {
     transition: .5s ease-in-out;
     border-bottom-color: ${({ theme }) => theme.colors.primary};
-  }
+  } */
 
   .btn-quiz {
     width: 100%;
