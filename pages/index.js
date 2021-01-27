@@ -51,13 +51,14 @@ export default function Home() {
   // console.log('Retorno do useState', name, setName);
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={db.bg} backgroundImageMobile={db.bgMobile}>
       <QuizContainer>
         <QuizLogo />
         {/* ========== Card ========== */}
         <WidgetsCards>
           <WidgetsCards.Header>
             <h1>The Witcher 3 - Quiz</h1>
+            <i class="fas fa-clipboard-list"></i>
           </WidgetsCards.Header>
           <WidgetsCards.Content>
             <p>Bem-vindo(a) ao quiz sobre The Witcher 3. Será que você realmente conhece o jogo ? Teste seus conhecimentos e divirta-se !</p>
@@ -72,6 +73,7 @@ export default function Home() {
               <input
                 className="formField"
                 type="text"
+                maxLength="20"
                 // Pegando o valor do input durança a mudança de estado
                 onChange={function (infoEvent) {
                   // console.log(infoEvent.target.value);
@@ -83,7 +85,7 @@ export default function Home() {
               />
               {/* Verificando se o input está vazio, se estiver, o botão fica desabilitado */}
               <button className="btn-quiz" type="submit" disabled={name.length === 0}>
-                Começar agora {name}
+                Começar agora {name} &nbsp; <i class="fas fa-angle-right"></i>
               </button>
             </form>
           </WidgetsCards.Content>

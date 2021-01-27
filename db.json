@@ -1,5 +1,6 @@
 {
     "bg": "https://images5.alphacoders.com/595/thumb-1920-595155.jpg",
+    "bgMobile": "https://fasrandco698.weebly.com/uploads/1/2/4/3/124359347/502235074.jpg",
     "title": "The Witcher 3 - Quiz",
     "description": "Quiz feito com React JS e Next JS, durante a semana da imersão da Alura",
     "theme": {

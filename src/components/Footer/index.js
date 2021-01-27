@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
-    background-color: #00000090;
+    background-color: rgba(3, 7, 30, 0.85);
     padding: 20px;
     display: flex;
     align-items: center;
     border-radius: 10px;
+    border-left-width: 5px;
+    border-left-color: #fff;
+    border-left-style: solid;
     img {
         width: 58px;
         margin-right: 23px;
@@ -35,7 +38,6 @@ export default function Footer(props) {
       <p>
         Criado por Lucas Fernando durante a incrível
         {' '}
-        a
         {' '}
         <a href="https://www.alura.com.br/">
           <span>Imersão React da Alura</span>
