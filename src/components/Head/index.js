@@ -6,6 +6,7 @@ function IndexPage() {
       <Head>
         <title>The Witcher 3 - Quiz Alura</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="https://banner2.cleanpng.com/20180404/dhw/kisspng-the-witcher-3-wild-hunt-geralt-of-rivia-the-witch-the-witcher-5ac56a4639c760.5775096615228872382367.jpg" />
         {/* <!-- Primary Meta Tags --> */}
         <meta name="title" content="The Witcher 3 - Quiz"/>
         <meta name="description" content="Imersão Alura React Next JS"/>
