@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     font-family: "Poppins", sans-serif;
     color: ${({ theme }) => theme.colors.contrastText};
+    overflow-x: hidden;
   }
 
   /* width */
@@ -83,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
     border-bottom-color: ${({ theme }) => theme.colors.primary};
   } */
 
-  .btn-quiz {
+  /* .btn-quiz {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -103,7 +104,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.secondary};
     border: none;
     cursor: default;
-  }
+  } */
 
   .fa-angle-right {
     font-size: 20px;

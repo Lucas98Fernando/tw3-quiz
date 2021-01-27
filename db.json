@@ -14,5 +14,33 @@
             "accent": "#03071E"
         },
         "border-radius": "10px"
-    }
+    },
+    "questions": [
+        {
+            "image": "https://images2.alphacoders.com/600/thumb-1920-600255.jpg",
+            "title": "Em qual ano o The Witcher 3 foi lançado ?",
+            "description": "Essa é pra aquecer hein, vá errar não 😜",
+            "answer": 2,
+            "alternatives": [
+              "2013",
+              "2014",
+              "2015",
+              "2016",
+              "2017"
+            ]
+        },
+        {
+            "image": "https://images2.alphacoders.com/600/thumb-1920-600255.jpg",
+            "title": "Como o Geralt é frequente conhecido ?",
+            "description": "Essa é fácil hein",
+            "answer": 4,
+            "alternatives": [
+               "A raposa branca",
+               "O lobo branco",
+               "O lobisomen branco",
+               "O leao branco",
+               "O urso branco"
+            ]
+        }
+    ]
 }

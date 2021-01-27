@@ -3,11 +3,13 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable max-len */
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // Importando o router do Next JS
 import { useRouter } from 'next/router';
 // Importando o arquivo de configuração
 import db from '../db.json';
+// Importando o componente de container
+import QuizContainer from '../src/components/QuizContainer';
 // Importando o logo
 import QuizLogo from '../src/components/QuizLogo';
 // Importando o componente QuizBackground
@@ -16,6 +18,8 @@ import QuizBackground from '../src/components/QuizBackground';
 import WidgetsCards from '../src/components/Widgets';
 // Importando o componente input
 import Input from '../src/components/Input';
+// Importando o componente do botão
+import Button from '../src/components/Button';
 // Importando o componente GitHubCorner
 import GitHubCorner from '../src/components/GitHubCorner';
 // Importando o componenete de rodapé
@@ -30,18 +34,18 @@ import FooterWrapper from '../src/components/Footer';
 //   height: 100vh;
 // `;
 
-// Container do Quiz
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
+// // Container do Quiz
+// export const QuizContainer = styled.div`
+//   width: 100%;
+//   max-width: 350px;
+//   padding-top: 45px;
+//   margin: auto 10%;
 
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+//   @media screen and (max-width: 500px) {
+//     margin: auto;
+//     padding: 15px;
+//   }
+// `;
 
 // Renderização dos componentes na home
 export default function Home() {
@@ -60,7 +64,7 @@ export default function Home() {
         <WidgetsCards>
           <WidgetsCards.Header>
             <h1>The Witcher 3 - Quiz</h1>
-            <i class="fas fa-clipboard-list"></i>
+            <i className="fas fa-clipboard-list" />
           </WidgetsCards.Header>
           <WidgetsCards.Content>
             <p>Bem-vindo(a) ao quiz sobre The Witcher 3. Será que você realmente conhece o jogo ? Teste seus conhecimentos e divirta-se !</p>
@@ -73,7 +77,7 @@ export default function Home() {
             }}
             >
               <Input
-                name = "NomeUsuario"
+                name="NomeUsuario"
                 maxLength="20"
                 // Pegando o valor do input durança a mudança de estado
                 onChange={(infoEvent) => {
@@ -83,12 +87,13 @@ export default function Home() {
                   setName(infoEvent.target.value);
                 }}
                 placeholder="Informe o seu nome para começar :)"
-                value = {name}
+                value={name}
               />
               {/* Verificando se o input está vazio, se estiver, o botão fica desabilitado */}
-              <button className="btn-quiz" type="submit" disabled={name.length === 0}>
-                Começar agora {name} &nbsp; <i class="fas fa-angle-right"></i>
-              </button>
+              <Button className="btn-quiz" type="submit" disabled={name.length === 0}>
+                {`Começar agora ${name}`} 
+                <i className="fas fa-angle-right" />
+              </Button>
             </form>
           </WidgetsCards.Content>
         </WidgetsCards> 

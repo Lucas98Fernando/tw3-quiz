@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 // Cards da página
-const WidgetsCards = styled.div `
+const WidgetsCards = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => {
-      return theme.colors.bgLight;
-  }};
+  background-color: ${({ theme }) => theme.colors.bgLight};
   border-radius: 10px;
   overflow: hidden; 
   box-shadow: 0px 0px 15px 2px #222;
@@ -26,7 +24,7 @@ const WidgetsCards = styled.div `
   }
 `;
 
-WidgetsCards.Header = styled.header `
+WidgetsCards.Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +33,7 @@ WidgetsCards.Header = styled.header `
 `;
 
 // Estilos dos cards
-WidgetsCards.Content = styled.div `
+WidgetsCards.Content = styled.div`
   padding: 20px 25px;
   & > *:first-child {
     margin-top: 0;
@@ -46,6 +44,28 @@ WidgetsCards.Content = styled.div `
   ul {
     list-style: none;
     padding: 0;
+  }
+`;
+
+WidgetsCards.Options = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+  display: block;
+  font-weight: 500;
+  
+  &:hover,
+  &:focus {
+    transition: .3s ease-in-out;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.contrastText};
+    box-shadow: 0px 0px 10px 5px #222;
   }
 `;
 
