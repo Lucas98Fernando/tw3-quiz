@@ -32,10 +32,6 @@ WidgetsCards.Header = styled.header `
   align-items: center;
   padding: 16px 30px;
   background: ${({ theme }) => theme.colors.primary};
-
-  * {
-    margin: 0;
-  }
 `;
 
 // Estilos dos cards
