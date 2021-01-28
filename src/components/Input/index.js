@@ -10,7 +10,7 @@ const InputBase = styled.input`
     border-bottom-style: solid;
     border-bottom-width: 0.1rem; 
     height: 30px;
-    margin: 10px 0 0;
+    margin: 15px 0 5px;
     padding: 10px 0;
     outline: none;
     transition: .5s ease-in-out;

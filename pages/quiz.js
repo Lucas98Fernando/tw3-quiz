@@ -21,11 +21,12 @@ function LoadingWidget() {
   return (
     <WidgetsCards>
       <WidgetsCards.Header>
-        Carregando...
+        <h2>Carregando Quiz</h2>
       </WidgetsCards.Header>
 
       <WidgetsCards.Content>
-        [Desafio do Loading]
+        {/* <p>[Desafio do Loading]</p> */}
+        <img style={{ width: '100%' }} src="https://media.giphy.com/media/vka5N8GrdqxSfJFwBK/giphy.gif" />
       </WidgetsCards.Content>
     </WidgetsCards>
   );
@@ -60,10 +61,10 @@ function QuestionsWidget({
       />
 
       <WidgetsCards.Content>
-        <h2 style={{ color: '#222', marginBottom: '15px' }}>
+        <h2 className="title-questions">
           {question.title}
         </h2>
-        <p>
+        <p className="description-questions">
           {question.description}
         </p>
 
@@ -93,6 +94,7 @@ function QuestionsWidget({
                   id={alternativeId}
                   type="radio"
                   name={questionId}
+                  className="radio-questions"
                 />
                 {alternative}
               </WidgetsCards.Options>
@@ -136,7 +138,7 @@ export default function QuizPage() {
     // fetch()...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 1 * 1500);
   }, []);
 
   // Função para capturar os dados do form para mudar para próxima questão

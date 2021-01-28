@@ -17,7 +17,7 @@
     },
     "questions": [
         {
-            "image": "https://images2.alphacoders.com/600/thumb-1920-600255.jpg",
+            "image": "https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_the_witcher_3_wild_hunt_28_2560x1080.jpg&height=506&sharpen",
             "title": "Em qual ano o The Witcher 3 foi lançado ?",
             "description": "Essa é pra aquecer hein, vá errar não 😜",
             "answer": 2,
@@ -30,9 +30,9 @@
             ]
         },
         {
-            "image": "https://images2.alphacoders.com/600/thumb-1920-600255.jpg",
-            "title": "Como o Geralt é frequente conhecido ?",
-            "description": "Essa é fácil hein",
+            "image": "https://i.pinimg.com/originals/7f/58/da/7f58dab98960e12fec0dfbce6afd2409.jpg",
+            "title": "Como o Geralt é conhecido ?",
+            "description": "Essa é fácil hein 😏",
             "answer": 4,
             "alternatives": [
                "A raposa branca",
@@ -40,6 +40,45 @@
                "O lobisomen branco",
                "O leao branco",
                "O urso branco"
+            ]
+        },
+        {
+            "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ec10782-c1d5-4a5d-98ea-d7ea776771b3/d99jxw6-64442ef8-1d32-4805-b710-c9179a0795d2.jpg/v1/fill/w_1024,h_576,q_75,strp/witcher_3___wallpaper__4k__by_mastersebix_d99jxw6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC84ZWMxMDc4Mi1jMWQ1LTRhNWQtOThlYS1kN2VhNzc2NzcxYjNcL2Q5OWp4dzYtNjQ0NDJlZjgtMWQzMi00ODA1LWI3MTAtYzkxNzlhMDc5NWQyLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.4hsFt-vlLyzq5WFApx0ZWfdJPCV_EHRH7lFhltgpXlQ",
+            "title": "Quantas DLC's do modo história, o jogo possui ?",
+            "description": "Não é pra errar viu 😎",
+            "answer": 1,
+            "alternatives": [
+               "1",
+               "2",
+               "3",
+               "4",
+               "Nenhuma"
+            ]
+        },
+        {
+            "image": "https://preview.redd.it/n5k33x2e3il31.png?auto=webp&s=4c7ba8332179e562b9a30b6b87131756002fea37",
+            "title": "Qual personagem o Geralt descreve com o termo: Cheiro de lilás e groselha ?",
+            "description": "Hum... Bem româtico né ? 🥰",
+            "answer": 2,
+            "alternatives": [
+               "Ciri",
+               "Triss",
+               "Yennefer",
+               "Keira",
+               "Priscilla"
+            ]
+        },
+        {
+            "image": "https://c4.wallpaperflare.com/wallpaper/832/348/967/the-witcher-3-wild-hunt-video-games-wallpaper-preview.jpg",
+            "title": "Como se chama a principal cidade retratada no jogo ?",
+            "description": "Eita... Agora complicou num foi ? 😕",
+            "answer": 0,
+            "alternatives": [
+               "Novigrad",
+               "Cintra",
+               "Vizima",
+               "Nilfgaard",
+               "Oxenfurt"
             ]
         }
     ]

@@ -22,6 +22,26 @@ const WidgetsCards = styled.div`
     line-height: 1;
     color: ${({ theme }) => theme.colors.black};
   }
+
+  .fa-clipboard-list, .fa-users,  .fa-angle-right  {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .title-questions {
+    color: ${({ theme }) => theme.colors.black};
+    margin-bottom: 15px ;
+  }
+
+  .description-questions {
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .radio-questions { 
+    margin-right: 10px;
+  }
 `;
 
 WidgetsCards.Header = styled.header`
@@ -65,7 +85,7 @@ WidgetsCards.Options = styled.a`
     transition: .3s ease-in-out;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.contrastText};
-    box-shadow: 0px 0px 10px 5px #222;
+    box-shadow: 0px 0px 10px 5px #777;
   }
 `;
 

@@ -58,10 +58,10 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 
-  .fa-clipboard-list {
+  /* .fa-clipboard-list {
     font-size: 25px;
     margin-left: 10px;
-  }
+  } */
 
   /* .formField {
     width: 100%;
@@ -106,10 +106,10 @@ const GlobalStyle = createGlobalStyle`
     cursor: default;
   } */
 
-  .fa-angle-right {
+  /* .fa-angle-right {
     font-size: 20px;
     margin-left: 5px;
-  }
+  } */
 `;
 
 // Chamando as cores no arquivo de configuração json

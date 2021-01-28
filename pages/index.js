@@ -101,11 +101,12 @@ export default function Home() {
         <WidgetsCards>
           <WidgetsCards.Header>
             <h1>Conheça o quiz da galera</h1>
+            <i className="fas fa-users" />
           </WidgetsCards.Header>
           <WidgetsCards.Content>
-            <p>Quiz 1</p>
-            <p>Quiz 2</p>
-            <p>Quiz 3</p>
+            <Button>Quiz da galera 1</Button>
+            <Button>Quiz da galera 2</Button>
+            <Button>Quiz da galera 3</Button>
           </WidgetsCards.Content>
         </WidgetsCards>
         <FooterWrapper />
