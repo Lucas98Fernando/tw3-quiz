@@ -39,7 +39,13 @@ function QuestionsWidget({
   questionIndex,
   onSubmit,
 }) {
+  // Estado para a alternativa selecionada
+  const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+  // Estado para validar a resposta e dá o feedback somente depois de clicar no botão de confirmar
+  const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
   const questionId = `question_${questionIndex}`;
+  const isCorrect = selectedAlternative === question.answer;
+  const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
     <WidgetsCards>
 
@@ -76,7 +82,13 @@ function QuestionsWidget({
         <form
           onSubmit={(infoEvent) => {
             infoEvent.preventDefault();
-            onSubmit();
+            setIsQuestionSubmited(true);
+            // Intervalo de tempo para exibir o feedback da resposta e passar para próxima alternativa
+            setTimeout (() => {
+              onSubmit();
+              setIsQuestionSubmited(false);
+              setSelectedAlternative(undefined);
+            }, 1 * 3000)
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -86,6 +98,10 @@ function QuestionsWidget({
               <WidgetsCards.Options
                 // Mudando a tag do HTML que será renderizada
                 as="label"
+
+                // Atribuindo um ID ao radio das opções
+                key={alternativeId}
+
                 // Linkando com o input
                 htmlFor={alternativeId}
               >
@@ -94,6 +110,7 @@ function QuestionsWidget({
                   id={alternativeId}
                   type="radio"
                   name={questionId}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   className="radio-questions"
                 />
                 {alternative}
@@ -101,9 +118,13 @@ function QuestionsWidget({
             );
           })}
 
-          <Button>
+          <Button disabled={!hasAlternativeSelected}>
             Confirmar resposta
           </Button>
+
+          {/* Feedback da resposta */}
+          {isQuestionSubmited && isCorrect && <p>Resposta correta !</p>}
+          {isQuestionSubmited && !isCorrect && <p>Resposta incorreta</p>}
         </form>
       </WidgetsCards.Content>
 
