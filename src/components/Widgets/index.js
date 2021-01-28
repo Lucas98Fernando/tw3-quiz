@@ -64,6 +64,7 @@ WidgetsCards.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
 
@@ -83,8 +84,8 @@ WidgetsCards.Options = styled.a`
   &:hover,
   &:focus {
     transition: .3s ease-in-out;
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.contrastText};
+    /* background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.contrastText}; */
     box-shadow: 0px 0px 10px 5px #777;
   }
 `;

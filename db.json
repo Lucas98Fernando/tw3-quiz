@@ -11,7 +11,9 @@
             "contrastText": "#FFFFFF",
             "black": "#222222",
             "bgLight": "#F5F5F5",
-            "accent": "#03071E"
+            "accent": "#03071E",
+            "lightBlue": "#4682B4",
+            "wrong": "#FF0000"
         },
         "border-radius": "10px"
     },
