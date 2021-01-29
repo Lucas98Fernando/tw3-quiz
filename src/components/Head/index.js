@@ -9,21 +9,21 @@ function IndexPage() {
         <link rel="shortcut icon" href="https://banner2.cleanpng.com/20180404/dhw/kisspng-the-witcher-3-wild-hunt-geralt-of-rivia-the-witch-the-witcher-5ac56a4639c760.5775096615228872382367.jpg" />
         {/* <!-- Primary Meta Tags --> */}
         <meta name="title" content="The Witcher 3 - Quiz"/>
-        <meta name="description" content="Imersão Alura React Next JS"/>
+        <meta name="description" content="Imersão Alura React - Next JS"/>
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://tw3-quiz.lucas98fernando.vercel.app/"/>
         <meta property="og:title" content="The Witcher 3 - Quiz"/>
-        <meta property="og:description" content="Imersão Alura React Next JS"/>
-        <meta property="og:image" content="https://i.imgur.com/BnsIXUF.png"/>
+        <meta property="og:description" content="Imersão Alura React - Next JS"/>
+        <meta property="og:image" content="https://i.imgur.com/54xlEH2.jpg"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://tw3-quiz.lucas98fernando.vercel.app/"/>
         <meta property="twitter:title" content="The Witcher 3 - Quiz"/>
-        <meta property="twitter:description" content="Imersão Alura React Next JS"/>
-        <meta property="twitter:image" content="https://i.imgur.com/BnsIXUF.png"/>
+        <meta property="twitter:description" content="Imersão Alura React - Next JS"/>
+        <meta property="twitter:image" content="https://i.imgur.com/54xlEH2.jpg"/>
 
         {/* Google Fonts - Poppins*/}
         <link rel="preconnect" href="https://fonts.gstatic.com"/>

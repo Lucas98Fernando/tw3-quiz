@@ -26,6 +26,9 @@ const FooterWrapper = styled.footer`
             text-decoration: underline;
         }
     }
+    .lucas {
+          font-weight: 700;
+    }
 `;
 
 export default function Footer(props) {
@@ -36,7 +39,7 @@ export default function Footer(props) {
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
       <p>
-        Criado por Lucas Fernando durante a incrível
+        Criado por <a  href="https://www.linkedin.com/in/lucas-fernando-dev" target="_blank" className="lucas">Lucas Fernando</a> durante a incrível
         {' '}
         {' '}
         <a href="https://www.alura.com.br/">

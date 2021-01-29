@@ -16,6 +16,7 @@ const InputBase = styled.input`
     transition: .5s ease-in-out;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    font-size: 15px;
     &:focus {
         transition: .5s ease-in-out;
         border-bottom-color: ${({ theme }) => theme.colors.primary};
@@ -24,13 +25,14 @@ const InputBase = styled.input`
 
 // Fazendo desestruturação com o onChange
 // eslint-disable-next-line react/prop-types
-export default function Input({ onChange, placeholder }) {
+export default function Input({ onChange, placeholder, maxLength }) {
   return (
     <div>
       {/* Recebendo as propriedades do onChange do arquivo index */}
       <InputBase
         onChange={onChange}
         placeholder={placeholder}
+        maxLength={maxLength}
       />
     </div>
   );

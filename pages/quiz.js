@@ -8,6 +8,8 @@
 import React from 'react';
 // Importando o arquivo de configuração
 import db from '../db.json';
+// Importando o router do Next JS
+import { useRouter } from 'next/router';
 // Importando o componente de container
 import QuizContainer from '../src/components/QuizContainer';
 // Importando o logo
@@ -39,6 +41,9 @@ function LoadingWidget() {
 
 // Componente de resultado
 function ResultWidget({ results }) {
+
+  const router = useRouter();
+
   return (
     <WidgetsCards>
       <WidgetsCards.Header>
@@ -76,6 +81,10 @@ function ResultWidget({ results }) {
             </li>
           ))}
         </ul>
+        <Button onClick={function backHome(infoEvent) {
+              infoEvent.preventDefault();
+              router.push(`/`);
+            }}>Voltar para o início <i class="fas fa-home" /></Button>
       </WidgetsCards.Content>
     </WidgetsCards>
   );
@@ -180,6 +189,7 @@ function QuestionsWidget({
 
           <Button disabled={!hasAlternativeSelected}>
             Confirmar resposta
+          <i class="fas fa-forward" />
           </Button>
       
         </AlternativesForm>

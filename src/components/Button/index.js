@@ -20,6 +20,16 @@ const Button = styled.button`
         border: none;
         cursor: default;
     }
+    &:hover {
+      opacity: .95;
+      transition: .3s ease-in-out;
+      box-shadow: 0px 0px 1px 2px #999;
+    }
+
+    .fa-home, .fa-forward {
+      font-size: 20px;
+      margin-left: 10px;
+    }
 `;
 
 Button.propTypes = {
