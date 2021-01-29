@@ -10,6 +10,13 @@ const QuizContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
+
+  .logoTW {
+    max-width: 70%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+  }
 `;
 
 export default QuizContainer;

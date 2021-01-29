@@ -9,7 +9,7 @@ const InputBase = styled.input`
     border-bottom-color: ${({ theme }) => theme.colors.accent};
     border-bottom-style: solid;
     border-bottom-width: 0.1rem; 
-    height: 30px;
+    height: 35px;
     margin: 15px 0 5px;
     padding: 10px 0;
     outline: none;

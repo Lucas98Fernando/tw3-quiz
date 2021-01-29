@@ -37,7 +37,8 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg} backgroundImageMobile={db.bgMobile}>
       <QuizContainer>
-        <QuizLogo />
+        <img className="logoTW"  src={db.logo} />
+        {/* <QuizLogo /> */}
         {/* ========== Card ========== */}
         <WidgetsCards>
           <WidgetsCards.Header>
@@ -82,9 +83,30 @@ export default function Home() {
             <i className="fas fa-users" />
           </WidgetsCards.Header>
           <WidgetsCards.Content>
-            <Button>Quiz da galera 1</Button>
-            <Button>Quiz da galera 2</Button>
-            <Button>Quiz da galera 3</Button>
+            <ul>
+            {/* Exibindo os outros quizes que possuem o link no db.json */}
+            {db.external.map((linkExterno) => {
+              // Tratando a forma dos links serem exibidos
+              const [projectName, githubUsername] = linkExterno
+              .replace(/\//g, '')
+              .replace('https:', '')
+              .replace('vercel.app', '')
+              .split('.');
+               return (
+                 <li>
+                    <WidgetsCards.Options 
+                    className="galeraQuiz" 
+                    // href={`/quiz/${projectName}___${githubUsername}`} 
+                    target="_blank"
+                    href={linkExterno}
+                    >
+                    {/* Listagem dos quizes da galera */}
+                    {`${githubUsername}/${projectName}`}
+                    </WidgetsCards.Options>
+                </li>
+              );
+            })}
+            </ul>
           </WidgetsCards.Content>
         </WidgetsCards>
         <FooterWrapper />

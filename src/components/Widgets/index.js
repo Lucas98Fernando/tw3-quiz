@@ -42,6 +42,12 @@ const WidgetsCards = styled.div`
   .radio-questions { 
     margin-right: 10px;
   }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 WidgetsCards.Header = styled.header`
@@ -55,6 +61,10 @@ WidgetsCards.Header = styled.header`
 // Estilos dos cards
 WidgetsCards.Content = styled.div`
   padding: 20px 25px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(200,200,200,0.8) 100%), url('https://www.nicepng.com/png/detail/340-3402995_witcher-png-image-witcher-3-white-wolf-vinyl.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   & > *:first-child {
     margin-top: 0;
   }
@@ -87,6 +97,16 @@ WidgetsCards.Options = styled.a`
     /* background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.contrastText}; */
     box-shadow: 0px 0px 10px 5px #777;
+  }
+
+  &.galeraQuiz {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    &.galeraQuiz {
+      font-size: 0.8rem;
+    }
   }
 `;
 

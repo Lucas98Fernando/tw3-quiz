@@ -7,21 +7,21 @@
 /* eslint-disable max-len */
 import React from 'react';
 // Importando o arquivo de configuração
-import db from '../db.json';
+import db from '../../../db.json';
 // Importando o router do Next JS
 import { useRouter } from 'next/router';
 // Importando o componente de container
-import QuizContainer from '../src/components/QuizContainer';
+import QuizContainer from '../../components/QuizContainer';
 // Importando o logo
-import QuizLogo from '../src/components/QuizLogo';
+import QuizLogo from '../../components/QuizLogo';
 // Importando o componente QuizBackground
-import QuizBackground from '../src/components/QuizBackground';
+import QuizBackground from '../../components/QuizBackground';
 // Importando o componente de Widgets
-import WidgetsCards from '../src/components/Widgets';
+import WidgetsCards from '../../components/Widgets';
 // Importando o componente do botão
-import Button from '../src/components/Button';
+import Button from '../../components/Button';
 // Importando o formulário personalizado de alternativas selecionadas
-import AlternativesForm from '../src/components/AlternativesForm';
+import AlternativesForm from '../../components/AlternativesForm';
 
 // Componente de carregamento
 function LoadingWidget() {
@@ -206,16 +206,17 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   // Vinculando os estados / Iniciando com o estado do componente LOADING
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   // Atribuindo os valores de perguntas acertadas em um array
   const [results, setResults] = React.useState([]);
   // Variáveis
-  const totalQuestions = db.questions.length; // Total das questões contidas no db.json
   const [currentQuestion, setCurrentQuestion] = React.useState(0); // Questão inicial que será exibida
   const questionIndex = currentQuestion; // Muda para qual pergunta será renderizada
-  const question = db.questions[questionIndex]; // Questão atual
+  const totalQuestions = externalQuestions.length; // Total das questões contidas no db.json
+  const question = externalQuestions [questionIndex]; // Questão atual
+  const bg = externalBg;
 
   // Função para guardar os resultados
   function addResult(result) {
@@ -254,8 +255,9 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg} backgroundImageMobile={db.bgMobile}>
+    <QuizBackground backgroundImage={bg}>
       <QuizContainer>
+        {/* <img className="logoTW"  src={db.logo} /> */}
         <QuizLogo />
 
         {/* Acessando uma chave dentro de um objeto e fazendo a comparação */}
