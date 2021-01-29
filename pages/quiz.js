@@ -26,7 +26,7 @@ function LoadingWidget() {
   return (
     <WidgetsCards>
       <WidgetsCards.Header>
-        <h2>Carregando Quiz</h2>
+        <h2>Carregando Quiz...</h2>
       </WidgetsCards.Header>
 
       <WidgetsCards.Content>
@@ -43,10 +43,13 @@ function ResultWidget({ results }) {
     <WidgetsCards>
       <WidgetsCards.Header>
         <h2>Resultado final</h2>
+        <i className="fas fa-poll" />
       </WidgetsCards.Header>
 
+      <img style={{ width: '100%' }} src="https://media.giphy.com/media/KzWAhzWD3HrJyAcLEM/giphy.gif" />
+
       <WidgetsCards.Content>
-        <p>
+        <h2 style={{ color: '#222', marginBottom: '20px' }}>
           Você acertou
           {' '}
           {/* Quando a resposta for correta, será capturado e colocado em um array */}
@@ -59,16 +62,15 @@ function ResultWidget({ results }) {
           }, 0)}
           {/* {results.filter((x) => x).length} */}
           {' '}
-          pergunta (s)
-        </p>
+          pergunta(s)
+        </h2>
         <ul>
           { results.map((result, index) => (
             <li key={`result_${result}`}>
-              pergunta
+              Pergunta
               {' '}
               {index + 1}
-              {' '}
-              Resultado:
+              :
               {' '}
               {result === true ? 'Acertou' : 'Errou'}
             </li>
@@ -160,6 +162,7 @@ function QuestionsWidget({
               >
                 <input
                   // Atribuindo um ID ao input
+                  style={{display: 'none'}}
                   id={alternativeId}
                   type="radio"
                   name={questionId}
@@ -171,13 +174,14 @@ function QuestionsWidget({
             );
           })}
 
+          {/* Feedback da resposta */}
+          {isQuestionSubmited && isCorrect && <span className="feedbackQuestions answerCorrect">Resposta correta, muito bem! <i className="fas fa-check" /></span>}
+          {isQuestionSubmited && !isCorrect && <span className="feedbackQuestions answerWrong">Resposta errada <i class="fas fa-times" /></span>}
+
           <Button disabled={!hasAlternativeSelected}>
             Confirmar resposta
           </Button>
-
-          {/* Feedback da resposta */}
-          {isQuestionSubmited && isCorrect && <p>Resposta correta !</p>}
-          {isQuestionSubmited && !isCorrect && <p>Resposta incorreta</p>}
+      
         </AlternativesForm>
       </WidgetsCards.Content>
 

@@ -23,7 +23,7 @@ const WidgetsCards = styled.div`
     color: ${({ theme }) => theme.colors.black};
   }
 
-  .fa-clipboard-list, .fa-users,  .fa-angle-right  {
+  .fa-clipboard-list, .fa-users,  .fa-angle-right, .fa-poll  {
     font-size: 25px;
     margin-left: 10px;
   }
@@ -72,7 +72,7 @@ WidgetsCards.Options = styled.a`
   outline: 0;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.black};
-  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  background-color: ${({ theme }) => `${theme.colors.primary}30`};
   padding: 10px 15px;
   margin: 8px 0;
   cursor: pointer;

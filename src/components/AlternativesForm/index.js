@@ -18,8 +18,19 @@ const AlternativesForm = styled.form`
       opacity: 1;
     } 
   }
-  button {
-    margin-top: 24px;
+
+  .feedbackQuestions {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .answerCorrect {
+    color: ${({ theme }) => theme.colors.success};
+    padding-right: 10px;
+  }
+
+  .answerWrong {
+    color: ${({ theme }) => theme.colors.wrong};
   }
 `;
 

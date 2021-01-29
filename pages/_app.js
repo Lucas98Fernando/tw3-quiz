@@ -57,59 +57,6 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-
-  /* .fa-clipboard-list {
-    font-size: 25px;
-    margin-left: 10px;
-  } */
-
-  /* .formField {
-    width: 100%;
-    border: none;
-    background:  ${({ theme }) => theme.colors.bgLight}; 
-    border-bottom-color: ${({ theme }) => theme.colors.accent};
-    border-bottom-style: solid;
-    border-bottom-width: 0.1rem; 
-    height: 30px;
-    margin: 10px 0 0;
-    padding: 10px 0;
-    outline: none;
-    transition: .5s ease-in-out;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-  }
-
-  .formField:focus {
-    transition: .5s ease-in-out;
-    border-bottom-color: ${({ theme }) => theme.colors.primary};
-  } */
-
-  /* .btn-quiz {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    height: 40px;
-    margin-top: 15px;
-    background-color: ${({ theme }) => theme.colors.accent};
-    color: ${({ theme }) => theme.colors.contrastText};
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .btn-quiz:disabled {
-    background-color: ${({ theme }) => theme.colors.secondary};
-    border: none;
-    cursor: default;
-  } */
-
-  /* .fa-angle-right {
-    font-size: 20px;
-    margin-left: 5px;
-  } */
 `;
 
 // Chamando as cores no arquivo de configuração json

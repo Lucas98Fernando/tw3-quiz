@@ -7,7 +7,7 @@
         "colors": {
             "primary": "#FF2230",
             "secondary": "#A8BBBB",
-            "success": "#76FF03",
+            "success": "#32CD32",
             "contrastText": "#FFFFFF",
             "black": "#222222",
             "bgLight": "#F5F5F5",
@@ -40,7 +40,7 @@
                "A raposa branca",
                "O lobo branco",
                "O lobisomen branco",
-               "O leao branco",
+               "O leão branco",
                "O urso branco"
             ]
         },

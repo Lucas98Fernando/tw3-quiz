@@ -25,28 +25,6 @@ import GitHubCorner from '../src/components/GitHubCorner';
 // Importando o componenete de rodapé
 import FooterWrapper from '../src/components/Footer';
 
-// // Componente do background
-// const BackgroundImage = styled.div`
-//   flex: 1;
-//   background-image: url(${db.bg});
-//   background-position: center;
-//   background-size: cover;
-//   height: 100vh;
-// `;
-
-// // Container do Quiz
-// export const QuizContainer = styled.div`
-//   width: 100%;
-//   max-width: 350px;
-//   padding-top: 45px;
-//   margin: auto 10%;
-
-//   @media screen and (max-width: 500px) {
-//     margin: auto;
-//     padding: 15px;
-//   }
-// `;
-
 // Renderização dos componentes na home
 export default function Home() {
   // O router precisa ser inicializado aqui
