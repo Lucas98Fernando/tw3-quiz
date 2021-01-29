@@ -18,7 +18,7 @@ const Button = styled.button`
     &:disabled {
         background-color: ${({ theme }) => theme.colors.secondary};
         border: none;
-        cursor: default;
+        cursor: not-allowed;
     }
     &:hover {
       opacity: .95;

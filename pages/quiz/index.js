@@ -10,6 +10,9 @@ import React from 'react';
 import db from '../../db.json';
 // Importando o router do Next JS
 import { useRouter } from 'next/router';
+// Importando a biblioteca de animações Framer Motion
+import { motion } from 'framer-motion';
+
 // Importando o componente de container
 import QuizContainer from '../../src/components/QuizContainer';
 // Importando o logo
@@ -106,7 +109,17 @@ function QuestionsWidget({
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
-    <WidgetsCards>
+    <WidgetsCards
+      as={motion.section}
+      transition={{ delay: 0.5, duration: 1 }}
+      variants={{
+        show: { opacity: 1, y: '0' },
+        hidden: { opacity: 0, y: '100%' }
+      }}
+      // O elemento sai da opacidade 0 para 1
+      initial="hidden"
+      animate="show"
+    >
 
       <WidgetsCards.Header>
         <h3>
@@ -237,7 +250,7 @@ export default function QuizPage() {
     // fetch()...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1500);
+    }, 1 * 2500);
   }, []);
 
   // Função para capturar os dados do form para mudar para próxima questão

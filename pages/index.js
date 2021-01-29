@@ -3,11 +3,13 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable max-len */
 import React from 'react';
-// import styled from 'styled-components';
 // Importando o router do Next JS
 import { useRouter } from 'next/router';
 // Importando o arquivo de configuração
 import db from '../db.json';
+// Importando a biblioteca de animações Framer Motion
+import { motion } from 'framer-motion';
+
 // Importando o componente de container
 import QuizContainer from '../src/components/QuizContainer';
 // Importando o logo
@@ -40,7 +42,17 @@ export default function Home() {
         <img className="logoTW"  src={db.logo} />
         {/* <QuizLogo /> */}
         {/* ========== Card ========== */}
-        <WidgetsCards>
+        <WidgetsCards
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 1 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' }
+          }}
+          // O elemento sai da opacidade 0 para 1
+          initial="hidden"
+          animate="show"
+        >
           <WidgetsCards.Header>
             <h1>The Witcher 3 - Quiz</h1>
             <i className="fas fa-clipboard-list" />
@@ -77,7 +89,17 @@ export default function Home() {
           </WidgetsCards.Content>
         </WidgetsCards> 
         {/* ========== Card ========== */}
-        <WidgetsCards>
+        <WidgetsCards 
+            as={motion.section}
+            transition={{ delay: 1, duration: 1 }}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            // O elemento sai da opacidade 0 para 1
+            initial="hidden"
+            animate="show"
+        >
           <WidgetsCards.Header>
             <h1>Conheça o quiz da galera</h1>
             <i className="fas fa-users" />
@@ -109,7 +131,17 @@ export default function Home() {
             </ul>
           </WidgetsCards.Content>
         </WidgetsCards>
-        <FooterWrapper />
+        <FooterWrapper 
+            as={motion.footer}
+            transition={{ delay: 1.5, duration: 1 }}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            // O elemento sai da opacidade 0 para 1
+            initial="hidden"
+            animate="show"
+        />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/Lucas98Fernando/tw3-quiz" />
     </QuizBackground>
